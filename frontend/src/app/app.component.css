@@ -1,0 +1,25 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.filter-button {
+  float: right;
+  margin: 3% 5% 2% 4%;
+  padding: 0.5% 2%;
+}
+
+.example-container {
+  width: 100%;
+}
+
+.example-sidenav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 14px 30px 0 rgba(0, 0, 0, 0.19);
+}

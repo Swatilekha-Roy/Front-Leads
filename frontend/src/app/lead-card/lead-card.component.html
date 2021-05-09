@@ -1,0 +1,64 @@
+<!--
+
+<mat-card class="example-card">
+    <mat-card-header>
+      
+      
+      <mat-card-title>Name of Lead</mat-card-title>
+      <mat-card-subtitle>Added By user google name</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content style="margin-left: 3.5%;">
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting. (Description of the Lead)
+      </p>
+      <br>
+      <mat-card-subtitle>Category: </mat-card-subtitle>
+      <p>Contact Number: </p>
+      <p>Full Address: </p>
+    </mat-card-content>
+    <mat-icon color="primary" style="margin-left: 3.5%;">calendar_today </mat-icon>
+    <br>
+    <mat-card-actions style="margin-left: 3%;">
+      <br>
+      <button mat-raised-button color="accent">VERIFY THIS</button>
+      <button mat-raised-button color="accent" style="margin-left: 50px;">SHARE</button>
+    </mat-card-actions>
+    <p style="margin-left: 5.1%;">Already verified by 5 <mat-icon>person</mat-icon></p>
+  </mat-card>
+-->
+
+<div class="content">
+  <div fxLayout="row wrap">
+  <mat-card fxFlex="25%" fxFlex.md="70%" fxFlex.xs="80%" class="example-card" *ngFor="let lead of leads">
+    <mat-card-header>
+      <mat-card-title>{{lead.lead_name}}</mat-card-title>
+      <mat-card-subtitle>Added By {{lead.author_name}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content style="margin-left: 3.5%;">
+      <p>
+       {{lead.lead_description}}
+      </p>
+      <br>
+      <mat-card-subtitle>Category: {{lead.lead_type}} </mat-card-subtitle>
+      <p>Contact Number of lead: {{lead.lead_phone}} </p>
+      <p>Full Address: {{lead.lead_address}} </p>
+      <p> City: {{lead.city}} </p>
+    </mat-card-content>
+    <mat-icon color="primary" style="margin-left: 3.5%;">calendar_today </mat-icon><span> Updated at {{lead.created}}</span>
+    <br>
+    <mat-card-actions style="margin-left: 3%;">
+      <br>
+      <button mat-raised-button color="accent" >VERIFY THIS</button>
+      <!-- <button *ngIf="user== null" mat-raised-button color="accent" (click)="openDialog()" >VERIFY THIS</button>
+      <button *ngIf="user!= null" mat-raised-button color="accent" (click)="openDialog()" >VERIFY THIS</button> -->
+      
+      <button mat-raised-button color="accent" style="margin-left: 50px;">SHARE</button>
+    </mat-card-actions>
+    <p style="margin-left: 5.1%;">Already verified by 5 <mat-icon>person</mat-icon></p>
+  </mat-card>
+</div>
+</div>
+
+

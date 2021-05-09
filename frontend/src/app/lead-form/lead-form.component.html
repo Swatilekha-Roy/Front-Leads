@@ -1,0 +1,164 @@
+<!--
+
+<p class="form-body">
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Name of Lead</mat-label>
+        <input matInput placeholder="RL Pharmacy" required>
+        <mat-icon color="primary" matSuffix>badge</mat-icon>
+    </mat-form-field>
+    <br>
+
+    <label id="example-radio-group-label">City of the Lead</label>
+    <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group">
+    <mat-radio-button value="Chennai">Chennai</mat-radio-button>
+    <mat-radio-button value="Delhi" style="margin-top: 1.5%;">Delhi</mat-radio-button>
+    <mat-radio-button value="Kolkata" style="margin-top: 1.5%;">Kolkata</mat-radio-button>
+    <mat-radio-button value="Mumbai" style="margin-top: 1.5%;">Mumbai</mat-radio-button>
+    </mat-radio-group>
+    <br>
+
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Phone Number of Lead</mat-label>
+        <input matInput placeholder="123-456-7890" required>
+        <mat-icon color="primary" matSuffix>phone</mat-icon> 
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Full Address of Lead</mat-label>
+        <input matInput placeholder="Ganapati Road, Chota Babupur, Mumbai, Pin- 713306" required>
+        <mat-icon color="primary" matSuffix>home</mat-icon> 
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill" color="accent">
+        <mat-label>Category of Resource</mat-label>
+        <mat-select>
+          <mat-option>Oxygen Cylinder</mat-option>
+          <mat-option>Plasma Donor</mat-option>
+          <mat-option>Oximeter</mat-option>
+          <mat-option>Unused Medicines</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Your Phone Number</mat-label>
+        <input matInput placeholder="123-456-7890">
+        <mat-icon color="primary" matSuffix>contact_support</mat-icon> 
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill" color="accent">
+        <mat-label>Type of Lead</mat-label>
+        <mat-select>
+          <mat-option>Verified</mat-option>
+          <mat-option>Unverified</mat-option>
+          <mat-option>Unavailable</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Time of Verification</mat-label>
+        <input matInput placeholder="09.05.2021, 7:00p.m.">
+        <mat-icon color="primary" matSuffix>update</mat-icon>
+        <mat-hint>When was this source last verified?</mat-hint> 
+    </mat-form-field>
+    <br><br>
+
+    <mat-form-field appearance="fill" color="accent">
+        <mat-label>About</mat-label>
+        <textarea matInput></textarea>
+        <mat-hint>Briefly describe the source and its genuineness please.</mat-hint> 
+    </mat-form-field>
+    
+    <br><br>
+    <button mat-raised-button color="primary" style="margin-top: 10%; left: 20%;">Submit Details!</button>
+  </p>
+-->
+
+  
+  
+  <p class="form-body">
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Name of Lead</mat-label>
+        <input matInput placeholder="RL Pharmacy" required [(ngModel)]="lead_name">
+        <mat-icon color="primary" matSuffix>badge</mat-icon>
+    </mat-form-field>
+    <br>
+
+    <label id="example-radio-group-label">City of the Lead</label>
+    <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group" [(ngModel)]="city">
+    <mat-radio-button value="chennai">Chennai</mat-radio-button>
+    <mat-radio-button value="delhi" style="margin-top: 1.5%;">Delhi</mat-radio-button>
+    <mat-radio-button value="kolkata" style="margin-top: 1.5%;">Kolkata</mat-radio-button>
+    <mat-radio-button value="mumbai" style="margin-top: 1.5%;">Mumbai</mat-radio-button>
+    </mat-radio-group>
+    <br>
+
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Phone Number of Lead</mat-label>
+        <input matInput placeholder="123-456-7890" [(ngModel)]="lead_phone" required>
+        <mat-icon color="primary" matSuffix>phone</mat-icon> 
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Full Address of Lead</mat-label>
+        <input matInput placeholder="Ganapati Road, Chota Babupur, Mumbai, Pin- 713306" required [(ngModel)]="lead_address">
+        <mat-icon color="primary" matSuffix>home</mat-icon> 
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill" color="accent">
+        <mat-label>Category of Resource</mat-label>
+        <mat-select [(ngModel)]="lead_type">
+          <mat-option value="oxygen">Oxygen Cylinder</mat-option>
+          <mat-option value="plasma_donor">Plasma Donor</mat-option>
+          <mat-option value="oximeter">Oximeter</mat-option>
+          <mat-option value="medicine">Unused Medicines</mat-option>
+          <mat-option value="remdevisir">Remdevisir</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Your Phone Number</mat-label>
+        <input matInput placeholder="123-456-7890"  [(ngModel)]="author_phone">
+        <mat-icon color="primary" matSuffix>contact_support</mat-icon> 
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill" color="accent">
+        <mat-label>Type of Lead</mat-label>
+        <mat-select  [(ngModel)]="is_verified">
+          <mat-option value="verified">Verified</mat-option>
+          <mat-option  value="not_verified">Unverified</mat-option>
+          <mat-option  value="not_available">Unavailable</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Time of Verification</mat-label>
+        <input matInput placeholder=" 7:00PM 9May,2021" [(ngModel)]="created">
+        <mat-icon color="primary" matSuffix>update</mat-icon>
+        <mat-hint>When was this source last verified?</mat-hint> 
+    </mat-form-field>
+    <br><br>
+
+    <mat-form-field appearance="fill" color="accent">
+        <mat-label>About</mat-label>
+        <textarea matInput [(ngModel)]="lead_description"></textarea>
+        <mat-hint>Briefly describe the source and its genuineness please.</mat-hint> 
+    </mat-form-field>
+    
+    <br><br>
+    <button mat-raised-button color="primary" style="margin-top: 10%; left: 20%;" (click)="submit()">Submit Details!</button>
+  </p>
+  

@@ -1,0 +1,28 @@
+<app-login></app-login>
+
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <h2 style="font-weight: 600; color: #ff4081">Customise Your Choices</h2>
+    <p *ngIf="showFiller">You can filter the kinds of resources that you are looking with the help of this filter. More options for all categories and resources will be added soon.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button color="primary">
+      Read More
+    </button>
+    <button mat-raised-button color="primary" class="filter-button" style="display: flex;" (click)="drawer.toggle()"><mat-icon>arrow_back</mat-icon></button>
+    <app-filter></app-filter>
+    
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    
+    <button mat-raised-button color="primary" class="filter-button" (click)="drawer.toggle()">Filter <mat-icon>sort</mat-icon></button>
+  </div>
+
+
+<app-lead-card></app-lead-card>
+<app-lead-form></app-lead-form>
+</mat-drawer-container>
+
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+
+    <span>Front Leads</span>
+    <span class="example-spacer"></span> 
+  
+    <cool-google-button *ngIf="isSignedin === false" mat-raised-button color="light" (click)= "googleSignin()">
+      Login with Google
+    </cool-google-button> 
+  
+
+   <cool-google-button *ngIf="user!= null" mat-raised-button color="light" (click)= "googleSignin()">
+    Logged in as {{user.name}}
+  </cool-google-button> 
+  
+      <button *ngIf="isSignedin === true" mat-raised-button color="light" style="margin-left: 2%;;" (click)="logout()" class="btn btn-primary">Log Out</button>
+      
+</mat-toolbar>
+
+
+
+
